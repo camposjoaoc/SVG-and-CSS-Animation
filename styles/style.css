@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    height: 100vh;
+    max-height: 100vh;
+    max-width: 95vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,14 +77,16 @@ body {
     padding: 20px 48px;
     gap: 8px;
     background: #202024;
-    box-shadow: 0px 57px 23px rgba(0, 0, 0, 0.02), 0px 32px 19px rgba(0, 0, 0, 0.08), 0px 14px 14px rgba(0, 0, 0, 0.13), 0px 4px 8px rgba(0, 0, 0, 0.15), 0px 0px 0px rgba(0, 0, 0, 0.15);
     border-radius: 999px;
     color: aliceblue;
     font-size: 40px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+    /* Transição suave */
 }
 
 .btn-style:hover {
     background-color: #8234E9;
     transition: color .5s, background-color .5s;
+    transform: scale(1.1);
 }

@@ -4,12 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!--Styles and Animations URL-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="../styles/svg.css">
+    <!--Icon-->
+    <link rel="icon" type="image/png" href="../images/email.ico">
+    <title>SVG and CSS Animation</title>
 </head>
 
 <body>
     <header></header>
-    <main></main>
+    <main>
+        <section class="container">
+            <svg>
+                <use xlink:href="../images/clock.svg#clock" fill="none" stroke="#000000"
+                    class="animate__animated animate__pulse animate__infinite"></use>
+            </svg>
+            <div class="container-left">
+                <h1 class="svg-main-title animate__animated animate__zoomInDown">To access the invitation, first make
+                    your payment</h1>
+                <p class="svg-informations">Choose if you want to pay or click 'Back' button to return to the main
+                    page. <br>Obs: This is not a scam!</p>
+                <button type="button" class="svg-btn-style" onclick="location.href='../index.html'">BACK
+                </button>
+            </div>
+            <div class="container-right">
+                <form>
+                    <label for="number" class="form-label">Card Number</label>
+                    <input type="number" name="full-number" id="full-number" placeholder="XXXX - XXXX- XXXX- XXXX"
+                        min="16" max="16" required>
+                    <label for="expiration-date">Expiration Date:</label>
+                    <input type="text" id="expiration-date" placeholder="MM/YYYY" maxlength="7">
+                    <label for="expiration-date">CVV</label>
+                    <input type="text" id="cvv" placeholder="123" maxlength="7">
+                    <!--SVG CARDS-->
+                    <svg width="300" height="200" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="animate__animated animate__flipInY">
+                        <rect width="300" height="200" x="0" y="0" rx="20" ry="20" fill="#e9c648" />
+                        <!--Brown Lines-->
+                        <line x1="0" y1="50" x2="300" y2="50" stroke="#756453" stroke-linecap="round"
+                            stroke-width="50" />
+                        <!--White Lines-->
+                        <line x1="35" y1="110" x2="70" y2="110" stroke="#e7e6c3" stroke-linecap="round"
+                            stroke-width="10" />
+                        <line x1="95" y1="110" x2="130" y2="110" stroke="#e7e6c3" stroke-linecap="round"
+                            stroke-width="10" />
+                        <line x1="35" y1="130" x2="40" y2="130" stroke="#e7e6c3" stroke-linecap="round"
+                            stroke-width="10" />
+                        <line x1="55" y1="130" x2="65" y2="130" stroke="#e7e6c3" stroke-linecap="round"
+                            stroke-width="10" />
+                        <line x1="85" y1="130" x2="93" y2="130" stroke="#e7e6c3" stroke-linecap="round"
+                            stroke-width="10" />
+                        <line x1="110" y1="130" x2="118" y2="130" stroke="#e7e6c3" stroke-linecap="round"
+                            stroke-width="10" />
+                        <line x1="130" y1="130" x2="130" y2="130" stroke="#e7e6c3" stroke-linecap="round"
+                            stroke-width="10" />
+                        <!--Red and Blue Circles-->
+                        <circle cy="150" cx="200" r="35" fill="red" />
+                        <circle cy="150" cx="240" r="35" fill="blue" />
+                    </svg>
+                    <button type="submit" class="svg-btn-style">PAY NOW</button>
+                </form>
+            </div>
+        </section>
+    </main>
     <footer></footer>
 </body>
 
